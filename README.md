@@ -26,6 +26,8 @@
 
 下载与你的系统匹配的一个安装包，并同时下载 `SHA256SUMS` 完成校验。需要查看版本说明或历史版本时，请进入 [GitHub Releases](https://github.com/ai-slate/ai-slate-local-zh/releases)。
 
+> **macOS v3.1.0 首次启动提示：** 当前 macOS 安装包尚未提供受信任的 Developer ID 签名和 Apple 公证。完成 SHA-256 校验后，如果系统提示“Apple 无法检查是否包含恶意软件”，请按 [macOS 首次启动被 Gatekeeper 拦截](#macos-首次启动被-gatekeeper-拦截)手动确认。不要删除隔离属性或全局关闭 Gatekeeper。
+
 > **在线体验是共享演示环境。** 请只输入演示数据：不要填写真实 API Key、真实业务内容、客户数据或个人敏感信息。演示站可以访问，不代表所有功能、所有模型或长期稳定性都已经验证。
 
 ---
@@ -199,6 +201,22 @@ chmod 0755 ./slate ./start.sh ./stop.sh ./upgrade.sh
 .\start.cmd
 # 等价写法：.\slate.exe start
 ```
+
+### macOS 首次启动被 Gatekeeper 拦截
+
+`v3.1.0` 的 macOS 安装包尚未提供受信任的 Developer ID 签名和 Apple 公证。通过浏览器下载后，第一次执行 `./slate self-check` 时，macOS 可能提示“Apple 无法检查‘slate’是否包含恶意软件”，并显示“移到废纸篓”按钮。
+
+只有在安装包和包内文件都已按上一节通过 SHA-256 校验，并且警告内容确实是“Apple 无法检查是否包含恶意软件”或“无法验证开发者”时，才按以下步骤为这个文件添加一次例外：
+
+1. 在终端执行一次 `./slate self-check`，出现提示后选择“完成”或关闭提示，不要移到废纸篓。
+2. 打开 macOS“系统设置”，进入“隐私与安全性”，向下滚动到“安全性”。
+3. 找到刚刚被阻止的 `slate`，点击“仍要打开”。这个按钮通常只在尝试启动后的一段时间内显示。
+4. 输入当前 Mac 的登录密码；警告再次出现时，确认文件名无误，然后点击“打开”。
+5. 回到终端重新执行 `./slate self-check`；通过后再执行 `./start.sh`。
+
+这个操作只为当前 `slate` 文件保存安全例外，不会全局关闭 Gatekeeper。完整的系统操作和风险说明见 [Apple 官方文档：在 Mac 上安全地打开 App](https://support.apple.com/zh-cn/102445)。
+
+> **遇到以下任一情况时不要继续：** SHA-256 校验失败；提示内容是“将损坏你的电脑”“包含恶意软件”或“App 已损坏”；文件已经被系统自动移到废纸篓。请删除当前下载内容，从本仓库 GitHub Releases 重新下载并再次校验；问题仍然存在时请提交反馈。不要使用网上流传的 `xattr` 删除隔离属性，也不要全局关闭 Gatekeeper。
 
 `self-check` 会检查内嵌资源、产品模式和许可证公钥，确认文件完整后才会继续。
 
