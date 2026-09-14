@@ -22,6 +22,10 @@
 
 <https://github.com/ai-slate/ai-slate-local-zh/releases>
 
+**快速下载 v3.1.0：** [macOS（Apple 芯片）](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-darwin-arm64.tar.gz) · [macOS（Intel 芯片）](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-darwin-amd64.tar.gz) · [Windows 64 位](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-windows-amd64.zip) · [Linux x86_64](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-linux-amd64.tar.gz) · [Linux ARM64](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-linux-arm64.tar.gz) · [SHA256 校验文件](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/SHA256SUMS)
+
+下载与你的系统匹配的一个安装包，并同时下载 `SHA256SUMS` 完成校验。需要查看版本说明或历史版本时，请进入 [GitHub Releases](https://github.com/ai-slate/ai-slate-local-zh/releases)。
+
 > **在线体验是共享演示环境。** 请只输入演示数据：不要填写真实 API Key、真实业务内容、客户数据或个人敏感信息。演示站可以访问，不代表所有功能、所有模型或长期稳定性都已经验证。
 
 ---
@@ -54,17 +58,17 @@
 
 智匣·融智可以把已经接入并达到可用状态的以下模型能力纳入统一网关。每个模型能否真正调用，取决于你已配置的服务商、密钥、网络、余额和权限，并以一次最小真实调用为准；这不表示已覆盖全部服务商或全部模型。
 
-| 能力 | 统一网关路径 | 说明 |
-|---|---|---|
-| 文本生成 | `/responses`、`/chat/completions`、`/messages` | 三种独立协议：OpenAI Responses、OpenAI Chat Completions、Anthropic Messages |
-| 文本嵌入 | `/embeddings` | 文本向量化 |
-| 图像 | `/images/generations`、`/images/edits` | 图像生成与图像编辑 |
-| 语音 | `/audio/transcriptions`、`/audio/speech`、`/audio/generations` | 语音识别、文字转语音、音频生成 |
-| 视频 | `/videos`、`/invocations/{id}`、`/invocations/{id}/cancel`、`/files/{id}/content` | 视频生成、异步状态查询、取消与结果下载 |
+| 能力 | 说明 |
+|---|---|
+| 文本生成 | 支持 OpenAI Responses、OpenAI Chat Completions、Anthropic Messages 三种独立协议 |
+| 文本嵌入 | 文本向量化 |
+| 图像 | 图像生成与图像编辑 |
+| 语音 | 语音识别、文字转语音、音频生成 |
+| 视频 | 视频生成、异步状态查询、取消与结果下载 |
 
-以上路径都挂在同一个网关基址 `/gateway/llm/v1` 下。统一的是：**网关基址、调用 API Key、模型选择、Provider Key 调度、Invocation 生命周期、用量、计价和文件生命周期**。
+统一的是：**网关入口、API Key 认证、模型选择、Provider Key 调度、Invocation 生命周期、用量、计价和文件生命周期**。统一管理不等于“一个相同请求格式覆盖所有能力”的万能接口：不同能力继续使用各自明确的请求格式，文本生成的三种协议字段同样不能混用。
 
-不同模态继续使用各自明确的路径与参数——这不是一个相同请求格式覆盖所有能力的“万能接口”。文本生成的三条协议字段也不能混用：`/responses`、`/chat/completions` 和 `/messages` 各有自己的请求结构。
+在文本生成能力之上，智匣·融智还支持 **Claude Code、Codex 和 OpenCode Agent 接入**，可以作为三类 Coding Agent 的统一模型入口：Claude Code 使用 Anthropic Messages，Codex 使用 OpenAI Responses，OpenCode 使用 OpenAI-compatible Chat Completions。三套工具进入同一套 API Key 认证、模型选择、调度、用量与计价体系；具体配置与验证步骤请在产品内“在线接入文档”的“Coding Agent 接入”查看。Agent 的实际效果还取决于所选模型的工具调用能力，接入后请先完成一次最小真实调用。
 
 ---
 
@@ -90,15 +94,17 @@
 
 `v3.1.0` 的 Release 包含五个平台包和根 `SHA256SUMS` 校验清单。通常你只需要下载与你的系统匹配的**一个**平台包，以及根 `SHA256SUMS` 用于校验。
 
-| 你的电脑 | 选择目标 | 包名 |
+| 你的电脑 | 选择目标 | 直接下载 |
 |---|---|---|
-| 普通 64 位 Intel/AMD Linux | `linux-amd64` | `ai-slate-local-${VERSION}-linux-amd64.tar.gz` |
-| ARM64 Linux（如 ARM 服务器） | `linux-arm64` | `ai-slate-local-${VERSION}-linux-arm64.tar.gz` |
-| 64 位 Windows | `windows-amd64` | `ai-slate-local-${VERSION}-windows-amd64.zip` |
-| Intel 芯片的 Mac | `darwin-amd64` | `ai-slate-local-${VERSION}-darwin-amd64.tar.gz` |
-| Apple 芯片（M 系列）的 Mac | `darwin-arm64` | `ai-slate-local-${VERSION}-darwin-arm64.tar.gz` |
+| 普通 64 位 Intel/AMD Linux | `linux-amd64` | [`ai-slate-local-3.1.0-linux-amd64.tar.gz`](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-linux-amd64.tar.gz) |
+| ARM64 Linux（如 ARM 服务器） | `linux-arm64` | [`ai-slate-local-3.1.0-linux-arm64.tar.gz`](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-linux-arm64.tar.gz) |
+| 64 位 Windows | `windows-amd64` | [`ai-slate-local-3.1.0-windows-amd64.zip`](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-windows-amd64.zip) |
+| Intel 芯片的 Mac | `darwin-amd64` | [`ai-slate-local-3.1.0-darwin-amd64.tar.gz`](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-darwin-amd64.tar.gz) |
+| Apple 芯片（M 系列）的 Mac | `darwin-arm64` | [`ai-slate-local-3.1.0-darwin-arm64.tar.gz`](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/ai-slate-local-3.1.0-darwin-arm64.tar.gz) |
 
-表中的 `${VERSION}` 就是上文的 `3.1.0`；Windows PowerShell 中写作 `$Version`。判断方法：macOS 在“关于本机”中查看芯片类型，Apple 芯片选 `darwin-arm64`，Intel 选 `darwin-amd64`；Linux 用 `uname -m`，输出 `x86_64` 选 `linux-amd64`，输出 `aarch64` / `arm64` 选 `linux-arm64`；Windows 选择 `windows-amd64`。
+表中的包名和链接固定对应当前版本 `3.1.0`；下方命令使用 `${VERSION}` 作为版本变量，Windows PowerShell 中写作 `$Version`。判断方法：macOS 在“关于本机”中查看芯片类型，Apple 芯片选 `darwin-arm64`，Intel 选 `darwin-amd64`；Linux 用 `uname -m`，输出 `x86_64` 选 `linux-amd64`，输出 `aarch64` / `arm64` 选 `linux-arm64`；Windows 选择 `windows-amd64`。
+
+无论选择哪个平台包，都请同时下载同一版本的 [`SHA256SUMS`](https://github.com/ai-slate/ai-slate-local-zh/releases/download/v3.1.0/SHA256SUMS)，并按下一节完成校验。
 
 每个压缩包解压后只有一个顶层目录，目录内固定包含**八个文件**：目标平台的 `slate`（Windows 为 `slate.exe`）、`README.zh-CN.md`、`RELEASE.json`、`SHA256SUMS`、`LICENSE.md`（本软件的专有许可），以及 `start`、`stop`、`upgrade` 三个脚本（Linux/macOS 为 `.sh`，Windows 为 `.cmd`）。包内 `SHA256SUMS` 校验的是**除它自身以外的七个文件**；`LICENSE.md` 也在完整性校验范围内，使用和转移安装包时请一并保留。
 
