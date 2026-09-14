@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1232" viewBox="0 104 1800 1232" role="img" aria-labelledby="ai-slate-v5-v3-title ai-slate-v5-v3-desc">
+<title id="ai-slate-v5-v3-title">智匣·融智 AI 模型服务中枢架构 V3</title>
+<desc id="ai-slate-v5-v3-desc">八层系统架构图，展示统一接入、员工权限与额度、服务商密钥与模型管理、模型和密钥两级选择、统一执行、调用账本、定价结算、内容存储、用量分析以及部署恢复。</desc>
+<defs>
+  <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#2E6FE8"/></marker>
+  <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7A4DD8"/></marker>
+  <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#EA580C"/></marker>
+  <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#168A54"/></marker>
+  <marker id="arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#526071"/></marker>
+  <style><![CDATA[
+    text { font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #0F172A; }
+    .plane { font-size: 15px; font-weight: 650; fill: #526071; }
+    .layer-no { font-size: 22px; font-weight: 750; fill: #0052FF; }
+    .layer-title { font-size: 14px; font-weight: 650; fill: #0F172A; }
+    .node-title { font-size: 16px; font-weight: 650; }
+    .node-sub { font-size: 12px; font-weight: 500; }
+    .chip-text { font-size: 12px; font-weight: 550; }
+    .zone-title { font-size: 13px; font-weight: 700; fill: #EA580C; }
+    .zone-title-green { font-size: 14px; font-weight: 700; fill: #168A54; }
+    .zone-title-purple { font-size: 14px; font-weight: 700; fill: #7A4DD8; }
+    .invariant { font-size: 12px; font-weight: 650; fill: #0038B8; }
+    .flow-label { font-size: 12px; font-weight: 650; fill: #7A4DD8; }
+    .connector { fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  ]]></style>
+</defs>
+<rect x="0" y="104" width="1800" height="1232" fill="#F7F9FC"/>
+<rect x="36" y="120" width="1704" height="48" rx="8" fill="#EEF2F7" stroke="#DCE3EC"/>
+<rect x="36" y="120" width="560" height="4" rx="2" fill="#7A4DD8"/>
+<rect x="596" y="120" width="584" height="4" rx="2" fill="#2E6FE8"/>
+<rect x="1180" y="120" width="560" height="4" rx="2" fill="#168A54"/>
+<line x1="660" y1="120" x2="660" y2="1320" stroke="#DCE3EC" stroke-dasharray="4 6"/>
+<line x1="1184" y1="120" x2="1184" y2="1320" stroke="#DCE3EC" stroke-dasharray="4 6"/>
+<rect x="36" y="184" width="1704" height="108" rx="10" fill="#FFFFFF" stroke="#DCE3EC"/>
+<rect x="36" y="184" width="160" height="108" rx="10" fill="#F7F9FC"/>
+<rect x="36" y="184" width="6" height="108" rx="3" fill="#0052FF"/>
+<rect x="36" y="300" width="1704" height="116" rx="10" fill="#FFFFFF" stroke="#DCE3EC"/>
+<rect x="36" y="300" width="160" height="116" rx="10" fill="#F7F9FC"/>
+<rect x="36" y="300" width="6" height="116" rx="3" fill="#4F46E5"/>
+<rect x="36" y="424" width="1704" height="124" rx="10" fill="#FFFFFF" stroke="#DCE3EC"/>
+<rect x="36" y="424" width="160" height="124" rx="10" fill="#F7F9FC"/>
+<rect x="36" y="424" width="6" height="124" rx="3" fill="#465CC7"/>
+<rect x="36" y="556" width="1704" height="160" rx="10" fill="#FFFFFF" stroke="#DCE3EC"/>
+<rect x="36" y="556" width="160" height="160" rx="10" fill="#F7F9FC"/>
+<rect x="36" y="556" width="6" height="160" rx="3" fill="#0052FF"/>
+<rect x="36" y="724" width="1704" height="132" rx="10" fill="#FFFFFF" stroke="#DCE3EC"/>
+<rect x="36" y="724" width="160" height="132" rx="10" fill="#F7F9FC"/>
+<rect x="36" y="724" width="6" height="132" rx="3" fill="#EA580C"/>
+<rect x="36" y="864" width="1704" height="116" rx="10" fill="#FFFFFF" stroke="#DCE3EC"/>
+<rect x="36" y="864" width="160" height="116" rx="10" fill="#F7F9FC"/>
+<rect x="36" y="864" width="6" height="116" rx="3" fill="#EA580C"/>
+<rect x="36" y="988" width="1704" height="172" rx="10" fill="#FFFFFF" stroke="#DCE3EC"/>
+<rect x="36" y="988" width="160" height="172" rx="10" fill="#F7F9FC"/>
+<rect x="36" y="988" width="6" height="172" rx="3" fill="#168A54"/>
+<rect x="36" y="1168" width="1704" height="152" rx="10" fill="#FFFFFF" stroke="#DCE3EC"/>
+<rect x="36" y="1168" width="160" height="152" rx="10" fill="#F7F9FC"/>
+<rect x="36" y="1168" width="6" height="152" rx="3" fill="#263449"/>
+<g id="connections">
+<path d="M900,238 H928" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M1160,238 H1192" class="connector" stroke="#168A54" marker-end="url(#arrow-green)"/>
+<path d="M1044,272 L1044,296 L766,296 L766,324" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M428,358 H444" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)"/>
+<path d="M852,358 H868" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M1052,358 H1068" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M1256,358 H1272" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M1444,358 H1460" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)"/>
+<path d="M1358,392 L1724,392 L1724,568 L718,568 L718,588" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M408,484 H420" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)"/>
+<path d="M596,484 H608" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)"/>
+<path d="M796,484 H808" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)"/>
+<path d="M984,484 H996" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)"/>
+<path d="M1164,484 H1176" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)"/>
+<path d="M1348,484 H1360" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)"/>
+<path d="M1536,520 L1536,540 L736,540 L736,588" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)"/>
+<path d="M572,634 H608" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)" stroke-dasharray="6 5"/>
+<path d="M828,634 H860" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M1088,634 H1120" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M1348,634 H1380" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M1544,680 L1544,720 L378,720 L378,756" class="connector" stroke="#2E6FE8" marker-end="url(#arrow-blue)"/>
+<path d="M528,792 H580" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M756,792 H772" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M948,792 H964" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M1140,792 H1156" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M1332,792 H1348" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M1052,816 L1052,860 L336,860 L336,888" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M444,922 H464" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M916,922 H952" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M1188,922 H1220" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M572,888 L572,880 L1072,880 L1072,888" class="connector" stroke="#EA580C" marker-end="url(#arrow-orange)"/>
+<path d="M1518,816 L1728,816 L1728,1000 L344,1000 L344,1056" class="connector" stroke="#168A54" marker-end="url(#arrow-green)"/>
+<path d="M1728,1000 L832,1000 L832,1056" class="connector" stroke="#168A54" marker-end="url(#arrow-green)"/>
+<path d="M440,1072 H456" class="connector" stroke="#168A54" marker-end="url(#arrow-green)"/>
+<path d="M560,1088 L560,1092 L344,1092 L344,1096" class="connector" stroke="#168A54" marker-end="url(#arrow-green)"/>
+<path d="M440,1112 H456" class="connector" stroke="#168A54" marker-end="url(#arrow-green)"/>
+<path d="M944,1072 H960" class="connector" stroke="#168A54" marker-end="url(#arrow-green)"/>
+<path d="M1076,1088 L1076,1092 L834,1092 L834,1096" class="connector" stroke="#168A54" marker-end="url(#arrow-green)"/>
+<path d="M944,1112 H960" class="connector" stroke="#168A54" marker-end="url(#arrow-green)"/>
+<path d="M1456,1072 H1472" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)" stroke-dasharray="6 5"/>
+<path d="M1582,1088 L1582,1092 L1354,1092 L1354,1096" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)" stroke-dasharray="6 5"/>
+<path d="M1456,1112 H1472" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)" stroke-dasharray="6 5"/>
+<path d="M1212,1112 H1232" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)" stroke-dasharray="6 5"/>
+<path d="M1712,1112 L1760,1112 L1760,358 L1712,358" class="connector" stroke="#7A4DD8" marker-end="url(#arrow-purple)" stroke-dasharray="6 5"/>
+<path d="M344,1128 V1192" class="connector" stroke="#526071" marker-end="url(#arrow-gray)"/>
+<path d="M960,1128 V1192" class="connector" stroke="#526071" marker-end="url(#arrow-gray)"/>
+<path d="M1472,1128 V1192" class="connector" stroke="#526071" marker-end="url(#arrow-gray)"/>
+</g>
+<g id="architecture-nodes">
+<text x="444" y="151" class="plane" text-anchor="middle">配置与管理</text>
+<text x="922" y="151" class="plane" text-anchor="middle">实时调用</text>
+<text x="1462" y="151" class="plane" text-anchor="middle">运营与数据资产</text>
+<text x="64" y="222" class="layer-no" text-anchor="start">01</text>
+<text x="64" y="254" class="layer-title" text-anchor="start">产品交付</text>
+<text x="64" y="276" class="layer-title" text-anchor="start">与统一接入</text>
+<text x="64" y="338" class="layer-no" text-anchor="start">02</text>
+<text x="64" y="370" class="layer-title" text-anchor="start">员工、权限</text>
+<text x="64" y="392" class="layer-title" text-anchor="start">与用量管控</text>
+<text x="64" y="462" class="layer-no" text-anchor="start">03</text>
+<text x="64" y="494" class="layer-title" text-anchor="start">服务商、密钥</text>
+<text x="64" y="516" class="layer-title" text-anchor="start">与模型管理</text>
+<text x="64" y="594" class="layer-no" text-anchor="start">04</text>
+<text x="64" y="626" class="layer-title" text-anchor="start">模型与密钥</text>
+<text x="64" y="648" class="layer-title" text-anchor="start">两级调度</text>
+<text x="64" y="762" class="layer-no" text-anchor="start">05</text>
+<text x="64" y="794" class="layer-title" text-anchor="start">统一执行</text>
+<text x="64" y="816" class="layer-title" text-anchor="start">与调用账本</text>
+<text x="64" y="902" class="layer-no" text-anchor="start">06</text>
+<text x="64" y="934" class="layer-title" text-anchor="start">计量、定价</text>
+<text x="64" y="956" class="layer-title" text-anchor="start">与额度结算</text>
+<text x="64" y="1026" class="layer-no" text-anchor="start">07</text>
+<text x="64" y="1058" class="layer-title" text-anchor="start">内容存储</text>
+<text x="64" y="1080" class="layer-title" text-anchor="start">用量分析</text>
+<text x="64" y="1102" class="layer-title" text-anchor="start">与数据资产</text>
+<text x="64" y="1206" class="layer-no" text-anchor="start">08</text>
+<text x="64" y="1238" class="layer-title" text-anchor="start">部署、运行</text>
+<text x="64" y="1260" class="layer-title" text-anchor="start">与故障恢复</text>
+<g data-node="单文件快速启动"><rect x="228" y="204" width="264" height="68" rx="8" fill="#FFFFFF" stroke="#DCE3EC" stroke-width="1.2" /><text x="360" y="233" class="node-title" text-anchor="middle" style="fill:#0F172A">单文件快速启动</text><text x="360" y="256" class="node-sub" text-anchor="middle" style="fill:#526071">Go 二进制 · 控制台 · 无需安装依赖</text></g>
+<g data-node="业务应用 / 智能体"><rect x="680" y="204" width="220" height="68" rx="8" fill="#FFFFFF" stroke="#DCE3EC" stroke-width="1.2" /><text x="790" y="233" class="node-title" text-anchor="middle" style="fill:#0F172A">业务应用 / 智能体</text><text x="790" y="256" class="node-sub" text-anchor="middle" style="fill:#526071">企业系统 · 自动化工具</text></g>
+<g data-node="统一模型网关"><rect x="928" y="204" width="232" height="68" rx="8" fill="#EBF1FF" stroke="#8DB0FF" stroke-width="1.2" /><text x="1044" y="233" class="node-title" text-anchor="middle" style="fill:#0038B8">统一模型网关</text><text x="1044" y="256" class="node-sub" text-anchor="middle" style="fill:#526071">统一认证 · 统一调用接口</text></g>
+<g data-node="统一能力入口"><rect x="1192" y="204" width="520" height="68" rx="8" fill="#E7F4EC" stroke="#9FD5BB" stroke-width="1.2" /><text x="1452" y="233" class="node-title" text-anchor="middle" style="fill:#0C6B45">统一能力入口</text><text x="1452" y="256" class="node-sub" text-anchor="middle" style="fill:#526071">文本 · 向量 · 语音 · 图像 · 视频 · 实时 · 文件</text></g>
+<g data-node="员工与角色"><rect x="228" y="324" width="200" height="68" rx="8" fill="#F6F1FF" stroke="#C4B5FD" stroke-width="1.2" /><text x="328" y="353" class="node-title" text-anchor="middle" style="fill:#5B21B6">员工与角色</text><text x="328" y="376" class="node-sub" text-anchor="middle" style="fill:#526071">账号 · 角色 · 启用 / 停用</text></g>
+<g data-node="员工权限与额度"><rect x="444" y="324" width="208" height="68" rx="8" fill="#F6F1FF" stroke="#C4B5FD" stroke-width="1.2" /><text x="548" y="353" class="node-title" text-anchor="middle" style="fill:#5B21B6">员工权限与额度</text><text x="548" y="376" class="node-sub" text-anchor="middle" style="fill:#526071">可用模型 · 自然月额度 · 账户余额</text></g>
+<g data-node="身份认证"><rect x="680" y="324" width="172" height="68" rx="8" fill="#FFFFFF" stroke="#DCE3EC" stroke-width="1.2" /><text x="766" y="353" class="node-title" text-anchor="middle" style="fill:#0F172A">身份认证</text><text x="766" y="376" class="node-sub" text-anchor="middle" style="fill:#526071">确认员工与组织</text></g>
+<g data-node="API Key 校验"><rect x="868" y="324" width="184" height="68" rx="8" fill="#FFFFFF" stroke="#DCE3EC" stroke-width="1.2" /><text x="960" y="353" class="node-title" text-anchor="middle" style="fill:#0F172A">API Key 校验</text><text x="960" y="376" class="node-sub" text-anchor="middle" style="fill:#526071">有效状态 · 授权范围</text></g>
+<g data-node="权限与额度核验"><rect x="1068" y="324" width="188" height="68" rx="8" fill="#EBF1FF" stroke="#8DB0FF" stroke-width="1.2" /><text x="1162" y="353" class="node-title" text-anchor="middle" style="fill:#0038B8">权限与额度核验</text><text x="1162" y="376" class="node-sub" text-anchor="middle" style="fill:#526071">模型权限 · 员工额度 · 密钥限额</text></g>
+<g data-node="允许调用"><rect x="1272" y="324" width="172" height="68" rx="8" fill="#EBF1FF" stroke="#8DB0FF" stroke-width="1.2" /><text x="1358" y="353" class="node-title" text-anchor="middle" style="fill:#0038B8">允许调用</text><text x="1358" y="376" class="node-sub" text-anchor="middle" style="fill:#526071">通过检查后进入调度</text></g>
+<g data-node="记录调用归属"><rect x="1460" y="324" width="252" height="68" rx="8" fill="#F6F1FF" stroke="#C4B5FD" stroke-width="1.2" /><text x="1586" y="353" class="node-title" text-anchor="middle" style="fill:#5B21B6">记录调用归属</text><text x="1586" y="376" class="node-sub" text-anchor="middle" style="fill:#526071">员工 · 应用 · API Key · 模型</text></g>
+<g data-node="内置服务商目录"><rect x="228" y="448" width="180" height="72" rx="8" fill="#FFFFFF" stroke="#DCE3EC" stroke-width="1.2" /><text x="318" y="479" class="node-title" text-anchor="middle" style="fill:#0F172A">内置服务商目录</text><text x="318" y="502" class="node-sub" text-anchor="middle" style="fill:#526071">选择服务商 · 填写密钥</text></g>
+<g data-node="服务商配置"><rect x="420" y="448" width="176" height="72" rx="8" fill="#FFFFFF" stroke="#DCE3EC" stroke-width="1.2" /><text x="508" y="479" class="node-title" text-anchor="middle" style="fill:#0F172A">服务商配置</text><text x="508" y="502" class="node-sub" text-anchor="middle" style="fill:#526071">接口地址 · 启用状态</text></g>
+<g data-node="服务商密钥池"><rect x="608" y="448" width="188" height="72" rx="8" fill="#F6F1FF" stroke="#C4B5FD" stroke-width="1.2" /><text x="702" y="479" class="node-title" text-anchor="middle" style="fill:#5B21B6">服务商密钥池</text><text x="702" y="502" class="node-sub" text-anchor="middle" style="fill:#526071">多密钥 · 权重 · 余额 · 健康</text></g>
+<g data-node="服务商模型"><rect x="808" y="448" width="176" height="72" rx="8" fill="#FFFFFF" stroke="#DCE3EC" stroke-width="1.2" /><text x="896" y="479" class="node-title" text-anchor="middle" style="fill:#0F172A">服务商模型</text><text x="896" y="502" class="node-sub" text-anchor="middle" style="fill:#526071">真实模型 · 能力 · 价格</text></g>
+<g data-node="逻辑模型"><rect x="996" y="448" width="168" height="72" rx="8" fill="#EBF1FF" stroke="#8DB0FF" stroke-width="1.2" /><text x="1080" y="479" class="node-title" text-anchor="middle" style="fill:#0038B8">逻辑模型</text><text x="1080" y="502" class="node-sub" text-anchor="middle" style="fill:#526071">对应用保持名称稳定</text></g>
+<g data-node="模型组合"><rect x="1176" y="448" width="172" height="72" rx="8" fill="#EBF1FF" stroke="#8DB0FF" stroke-width="1.2" /><text x="1262" y="479" class="node-title" text-anchor="middle" style="fill:#0038B8">模型组合</text><text x="1262" y="502" class="node-sub" text-anchor="middle" style="fill:#526071">编排多个候选模型</text></g>
+<g data-node="配置生效"><rect x="1360" y="448" width="352" height="72" rx="8" fill="#F6F1FF" stroke="#C4B5FD" stroke-width="1.2" /><text x="1536" y="479" class="node-title" text-anchor="middle" style="fill:#5B21B6">配置生效</text><text x="1536" y="502" class="node-sub" text-anchor="middle" style="fill:#526071">检查 → 生成 → 生效</text></g>
+<g data-node="不停服接入语音、图像、视频"><rect x="228" y="580" width="344" height="108" rx="8" fill="#FCFAFF" stroke="#BFA6FF" stroke-width="1.2" stroke-dasharray="6 5"/><text x="400" y="629" class="node-title" text-anchor="middle" style="fill:#5B21B6">不停服接入语音、图像、视频</text><text x="400" y="652" class="node-sub" text-anchor="middle" style="fill:#526071">新增服务商能力｜验证通过后在线启用</text></g>
+<g data-node="一次调用固定一套规则"><rect x="608" y="588" width="220" height="92" rx="8" fill="#0052FF" stroke="#0052FF" stroke-width="1.2" /><text x="718" y="629" class="node-title" text-anchor="middle" style="fill:#FFFFFF">一次调用固定一套规则</text><text x="718" y="652" class="node-sub" text-anchor="middle" style="fill:#DCE7FF">开始后不受在线配置变更影响</text></g>
+<g data-node="选择服务商模型"><rect x="860" y="588" width="228" height="92" rx="8" fill="#EBF1FF" stroke="#8DB0FF" stroke-width="1.2" /><text x="974" y="629" class="node-title" text-anchor="middle" style="fill:#0038B8">选择服务商模型</text><text x="974" y="652" class="node-sub" text-anchor="middle" style="fill:#526071">能力匹配 · 权重 · 同用户优先 · 健康</text></g>
+<g data-node="选择服务商密钥"><rect x="1120" y="588" width="228" height="92" rx="8" fill="#EBF1FF" stroke="#8DB0FF" stroke-width="1.2" /><text x="1234" y="629" class="node-title" text-anchor="middle" style="fill:#0038B8">选择服务商密钥</text><text x="1234" y="652" class="node-sub" text-anchor="middle" style="fill:#526071">权重 · 余额 · 临时停用 · 同用户优先</text></g>
+<g data-node="调用模型服务商"><rect x="1380" y="588" width="332" height="92" rx="8" fill="#FFFFFF" stroke="#DCE3EC" stroke-width="1.2" /><text x="1546" y="629" class="node-title" text-anchor="middle" style="fill:#0F172A">调用模型服务商</text><text x="1546" y="652" class="node-sub" text-anchor="middle" style="fill:#526071">失败自动切换 · 已返回内容不重试</text></g>
+<text x="860" y="702" class="invariant" text-anchor="start">先选模型，再选密钥</text>
+<text x="1120" y="702" class="invariant" text-anchor="start">增加密钥不会提高模型权重</text>
+<g data-node="统一多模态执行"><rect x="228" y="756" width="300" height="72" rx="8" fill="#EBF1FF" stroke="#8DB0FF" stroke-width="1.2" /><text x="378" y="787" class="node-title" text-anchor="middle" style="fill:#0038B8">统一多模态执行</text><text x="378" y="810" class="node-sub" text-anchor="middle" style="fill:#526071">文本 · 语音 · 图像 · 视频 · 文件任务</text></g>
+<rect x="556" y="744" width="1156" height="92" rx="10" fill="#FFF9F4" stroke="#FDBA8C" stroke-width="1.2"/>
+<rect x="572" y="736" width="148" height="24" rx="4" fill="#FFF9F4"/>
+<text x="580" y="754" class="zone-title" text-anchor="start">调用事实账本</text>
+<g data-node="调用记录"><rect x="580" y="768" width="176" height="48" rx="8" fill="#FFF3E8" stroke="#FDBA8C" stroke-width="1.2" /><text x="668" y="798" class="node-title" text-anchor="middle" style="fill:#9A3412">调用记录</text></g>
+<g data-node="服务商执行记录"><rect x="772" y="768" width="176" height="48" rx="8" fill="#FFF3E8" stroke="#FDBA8C" stroke-width="1.2" /><text x="860" y="798" class="node-title" text-anchor="middle" style="fill:#9A3412">服务商执行记录</text></g>
+<g data-node="原始用量"><rect x="964" y="768" width="176" height="48" rx="8" fill="#FFF3E8" stroke="#FDBA8C" stroke-width="1.2" /><text x="1052" y="798" class="node-title" text-anchor="middle" style="fill:#9A3412">原始用量</text></g>
+<g data-node="计费明细"><rect x="1156" y="768" width="176" height="48" rx="8" fill="#EA580C" stroke="#EA580C" stroke-width="1.2" /><text x="1244" y="798" class="node-title" text-anchor="middle" style="fill:#FFFFFF">计费明细</text></g>
+<g data-node="结果与任务状态"><rect x="1348" y="768" width="340" height="48" rx="8" fill="#FFF3E8" stroke="#FDBA8C" stroke-width="1.2" /><text x="1518" y="798" class="node-title" text-anchor="middle" style="fill:#9A3412">结果与任务状态</text></g>
+<g data-node="统一计量"><rect x="228" y="888" width="216" height="68" rx="8" fill="#FFF3E8" stroke="#FDBA8C" stroke-width="1.2" /><text x="336" y="917" class="node-title" text-anchor="middle" style="fill:#9A3412">统一计量</text><text x="336" y="940" class="node-sub" text-anchor="middle" style="fill:#526071">Token · 时长 · 图片 · 音频</text></g>
+<g data-node="服务商成本"><rect x="464" y="888" width="216" height="68" rx="8" fill="#FFF3E8" stroke="#FDBA8C" stroke-width="1.2" /><text x="572" y="917" class="node-title" text-anchor="middle" style="fill:#9A3412">服务商成本</text><text x="572" y="940" class="node-sub" text-anchor="middle" style="fill:#526071">固定价 · 倍率 · 峰谷 · 策略</text></g>
+<g data-node="平台售价"><rect x="700" y="888" width="216" height="68" rx="8" fill="#FFF3E8" stroke="#FDBA8C" stroke-width="1.2" /><text x="808" y="917" class="node-title" text-anchor="middle" style="fill:#9A3412">平台售价</text><text x="808" y="940" class="node-sub" text-anchor="middle" style="fill:#526071">继承模型价格 · 企业自定义</text></g>
+<g data-node="费用结算"><rect x="952" y="888" width="236" height="68" rx="8" fill="#FFF3E8" stroke="#FDBA8C" stroke-width="1.2" /><text x="1070" y="917" class="node-title" text-anchor="middle" style="fill:#9A3412">费用结算</text><text x="1070" y="940" class="node-sub" text-anchor="middle" style="fill:#526071">锁定调用价格 · 更新余额</text></g>
+<g data-node="预算与限额"><rect x="1220" y="888" width="492" height="68" rx="8" fill="#FFF3E8" stroke="#FDBA8C" stroke-width="1.2" /><text x="1466" y="917" class="node-title" text-anchor="middle" style="fill:#9A3412">预算与限额</text><text x="1466" y="940" class="node-sub" text-anchor="middle" style="fill:#526071">员工自然月额度 · API Key 累计限额</text></g>
+<rect x="228" y="1012" width="456" height="124" rx="8" fill="#F7FBF9" stroke="#9FD5BB"/>
+<text x="248" y="1040" class="zone-title-green" text-anchor="start">异步内容存储</text>
+<rect x="248" y="1056" width="192" height="32" rx="6" fill="#F1F8F4" stroke="#A8D8C1"/><text x="344" y="1077" class="chip-text" text-anchor="middle" fill="#0C6B45">必要内容快照</text>
+<rect x="456" y="1056" width="208" height="32" rx="6" fill="#F1F8F4" stroke="#A8D8C1"/><text x="560" y="1077" class="chip-text" text-anchor="middle" fill="#0C6B45">非阻塞存储队列</text>
+<rect x="248" y="1096" width="192" height="32" rx="6" fill="#F1F8F4" stroke="#A8D8C1"/><text x="344" y="1117" class="chip-text" text-anchor="middle" fill="#0C6B45">Pebble 本地 KV 存储</text>
+<rect x="456" y="1096" width="208" height="32" rx="6" fill="#F1F8F4" stroke="#A8D8C1"/><text x="560" y="1117" class="chip-text" text-anchor="middle" fill="#0C6B45">内容库 / JSONL 数据集</text>
+<rect x="704" y="1012" width="508" height="124" rx="8" fill="#F7FBF9" stroke="#9FD5BB"/>
+<text x="724" y="1040" class="zone-title-green" text-anchor="start">多维用量分析</text>
+<rect x="724" y="1056" width="220" height="32" rx="6" fill="#F1F8F4" stroke="#A8D8C1"/><text x="834" y="1077" class="chip-text" text-anchor="middle" fill="#0C6B45">调用账本与每日汇总</text>
+<rect x="960" y="1056" width="232" height="32" rx="6" fill="#F1F8F4" stroke="#A8D8C1"/><text x="1076" y="1077" class="chip-text" text-anchor="middle" fill="#0C6B45">统一用量查询</text>
+<rect x="724" y="1096" width="220" height="32" rx="6" fill="#F1F8F4" stroke="#A8D8C1"/><text x="834" y="1117" class="chip-text" text-anchor="middle" fill="#0C6B45">按员工 / API Key / 模型</text>
+<rect x="960" y="1096" width="232" height="32" rx="6" fill="#F1F8F4" stroke="#A8D8C1"/><text x="1076" y="1117" class="chip-text" text-anchor="middle" fill="#0C6B45">趋势 · 对比 · 报表导出</text>
+<rect x="1232" y="1012" width="480" height="124" rx="8" fill="#FCFAFF" stroke="#BFA6FF" stroke-dasharray="6 5"/>
+<text x="1252" y="1040" class="zone-title-purple" text-anchor="start">企业使用画像（可选）</text>
+<rect x="1252" y="1056" width="204" height="32" rx="6" fill="#FAF7FF" stroke="#D8C7FF"/><text x="1354" y="1077" class="chip-text" text-anchor="middle" fill="#5B21B6">已授权调用数据</text>
+<rect x="1472" y="1056" width="220" height="32" rx="6" fill="#FAF7FF" stroke="#D8C7FF"/><text x="1582" y="1077" class="chip-text" text-anchor="middle" fill="#5B21B6">员工 / 应用使用画像</text>
+<rect x="1252" y="1096" width="204" height="32" rx="6" fill="#FAF7FF" stroke="#D8C7FF"/><text x="1354" y="1117" class="chip-text" text-anchor="middle" fill="#5B21B6">企业使用全景</text>
+<rect x="1472" y="1096" width="220" height="32" rx="6" fill="#FAF7FF" stroke="#D8C7FF"/><text x="1582" y="1117" class="chip-text" text-anchor="middle" fill="#5B21B6">预算与培训复盘</text>
+<text x="1608" y="1148" class="flow-label" text-anchor="start">调整额度与模型策略</text>
+<g data-node="本地一体化运行"><rect x="228" y="1192" width="456" height="100" rx="8" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.2" /><text x="456" y="1237" class="node-title" text-anchor="middle" style="fill:#263449">本地一体化运行</text><text x="456" y="1260" class="node-sub" text-anchor="middle" style="fill:#526071">Go 单二进制 · SQLite · Badger · Pebble</text></g>
+<g data-node="企业多实例部署"><rect x="704" y="1192" width="508" height="100" rx="8" fill="#EEF4FF" stroke="#8DB0FF" stroke-width="1.2" stroke-dasharray="6 5"/><text x="958" y="1237" class="node-title" text-anchor="middle" style="fill:#0038B8">企业多实例部署</text><text x="958" y="1260" class="node-sub" text-anchor="middle" style="fill:#526071">多个 Go API 实例 · PostgreSQL · Redis · 对象存储</text></g>
+<g data-node="任务连续性与数据恢复"><rect x="1232" y="1192" width="480" height="100" rx="8" fill="#EEF8F4" stroke="#8CCBB0" stroke-width="1.2" /><text x="1472" y="1237" class="node-title" text-anchor="middle" style="fill:#0C6B45">任务连续性与数据恢复</text><text x="1472" y="1260" class="node-sub" text-anchor="middle" style="fill:#526071">跨实例接管 · 断点续作 · 防重复 · 备份恢复</text></g>
+</g>
+</svg>
